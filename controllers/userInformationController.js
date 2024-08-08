@@ -68,8 +68,7 @@ const deleteInformation = asyncHandler(async (req, res) => {
         res.status(404)
         throw new Error("Not Found")
     }
-
-    await Information.findByIdAndDelete()
+    await Information.findByIdAndDelete(id)
     res.status(200).json(findId)
 })
 

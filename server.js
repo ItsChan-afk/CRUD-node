@@ -12,7 +12,7 @@ app.use(express.json())
 dbConnect()
 
 app.use('/api/userinformations' , require('./routes/informationRoutes'))
-
+app.use('/api/users' , require('./routes/userRoutes'))
 app.use(errorHandler)
 
 app.listen(PORT , () => {
